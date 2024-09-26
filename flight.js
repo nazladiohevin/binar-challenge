@@ -19,9 +19,9 @@ function flight(latitude) {
       throw new EngineError('Engine is not working');
   }
   // 3000 < latitude < 10000
-  if (latitude > 10000 || latitude < 3000) {
+  if (latitude > 12000 || latitude < 3000) {
       console.log('Plane is flying at latitude: ', latitude);
-      throw new FlightError('Cannot fly at this latitude');
+      throw new FlightError('Sorry, cannot fly at this latitude');
   }
   console.log('Flying at latitude: ', latitude);
 }
