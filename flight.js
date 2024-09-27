@@ -21,7 +21,7 @@ class FlightError extends Error {
   }
 
   function takeoff() {
-      if (Math.random() > 0.8) {
+      if (Math.random() > 0.9) {
         throw new TakeOffError('Cant take off the flight');
     }console.log('Plane is taking off');
   }    
