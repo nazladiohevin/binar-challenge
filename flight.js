@@ -1,4 +1,10 @@
 // To Do
+class TakeOffError extends Error {
+    constructur(message) {
+        super (message)
+        this.name = 'TakeOffError';
+    }
+}
 
 class FlightError extends Error {
     constructor(message) {
@@ -13,7 +19,13 @@ class FlightError extends Error {
         this.name = 'EngineError';
     }
   }
-  
+
+  function takeoff() {
+      if (Math.random() > 0.8) {
+        throw new TakeOffError('Cant take off the flight');
+    }console.log('Plane is taking off');
+  }    
+
   function flight(latitude) {
     if (Math.random() > 0.75) {
         throw new EngineError('Engine is not working');
